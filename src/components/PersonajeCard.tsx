@@ -45,22 +45,61 @@ export function PersonajeCard({pj, onAcertar, yaDescubierto}: Props){
   }, [acerto])
 
     return(
-        <li 
-              className='flex flex-col items-center text-center bg-amber-100 border rounded-2xl py-8 px-4'
-              key={pj.id}>
-                <img 
-                className={`h-24 w-24 object-contain transition-opacity border p-3 rounded-2xl bg-amber-200 duration-300 ${acerto ? 'opacity-100' : 'opacity-25'}`}
-                src={`https://cdn.thesimpsonsapi.com/500/character/${pj.id}.webp`} 
-                alt={`Foto de ${pj.name}`} />
-                <h2 className={`${!acerto ? 'opacity-0' : 'opacity-100'}`}>{pj.name}</h2>
-                <input
-                    type="text"
-                    value={respuesta}
-                    disabled={acerto}
-                    onChange={(e) => setRespuesta(e.target.value)}
-                    className={`border rounded px-2 py-1 text-center bg-amber-300 disabled:bg-green-100 ${!acerto ? 'opacity-100' : 'opacity-0'}`}
-                    placeholder="¿Quién es?"
-                />
-              </li>
+        <li
+  key={pj.id}
+  className="
+    flex flex-col items-center text-center
+    bg-yellow-200
+    border-4 border-blue-600
+    rounded-3xl
+    py-8 px-4
+    shadow-[5px_5px_0_0_#000]
+    transition-transform
+    hover:-translate-y-1
+  "
+>
+  <div className="bg-amber-300 border-4 border-blue-500 rounded-2xl p-4 mb-4">
+    <img
+      className={`
+        h-24 w-24 object-contain
+        transition-all duration-300
+        ${acerto ? 'opacity-100 scale-110' : 'opacity-30'}
+      `}
+      src={`https://cdn.thesimpsonsapi.com/500/character/${pj.id}.webp`}
+      alt={`Foto de ${pj.name}`}
+    />
+  </div>
+
+  <h2
+    className={`
+      text-2xl font-extrabold text-blue-900 mb-3
+      transition-opacity duration-300
+      ${acerto ? 'opacity-100' : 'opacity-0'}
+    `}
+  >
+    {pj.name}
+  </h2>
+
+  <input
+    type="text"
+    value={respuesta}
+    disabled={acerto}
+    onChange={(e) => setRespuesta(e.target.value)}
+    placeholder="¿Quién es?"
+    className={`
+      w-full max-w-40
+      text-center text-lg font-bold
+      bg-yellow-300
+      border-4 border-blue-600
+      rounded-xl px-3 py-2
+      shadow-[3px_3px_0_0_#000]
+      focus:outline-none focus:ring-2 focus:ring-blue-500
+      transition-all duration-300
+      disabled:bg-green-200 disabled:border-green-600
+      ${acerto ? 'opacity-0' : 'opacity-100'}
+    `}
+  />
+</li>
+
     )
 }

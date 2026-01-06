@@ -11,14 +11,29 @@ export function Home(){
 
     return (
         <section
-  className="min-h-screen bg-cover bg-center bg-no-repeat md:bg-fixed flex flex-col items-center justify-center"
-  style={{ backgroundImage: "url('https://wallpapercave.com/wp/wp4267790.jpg')" }}>
-    <p className="font-bold mb-4">Sos capaz de adivinar todos los nombres de los personajes de Los Simpons?</p>
-  <button
-  onClick={scrollToGrid} 
-  className="px-8 py-4 bg-yellow-400 hover:bg-yellow-500 text-2xl font-bold rounded-lg shadow-lg transition">
-    Jugar
-  </button>
+  className="min-h-screen bg-cover bg-center bg-no-repeat md:bg-fixed flex flex-col items-center justify-center text-center px-4"
+  style={{ backgroundImage: "url('https://wallpapercave.com/wp/wp4267790.jpg')" }}
+>
+  <div className="bg-yellow-300 border-4 border-blue-600 rounded-3xl p-8 shadow-[6px_6px_0_0_#000] max-w-2xl">
+    <p className="text-3xl md:text-4xl font-extrabold text-blue-900 mb-6 drop-shadow">
+      ¿Sos capaz de adivinar todos los nombres de los personajes de  
+      <span className="text-orange-600"> Los Simpsons</span>?
+    </p>
+
+    <button
+      onClick={scrollToGrid}
+      className="px-10 py-4 bg-orange-500 hover:bg-orange-600 
+                 text-3xl font-extrabold text-yellow-100
+                 border-4 border-blue-700 rounded-full
+                 shadow-[4px_4px_0_0_#000]
+                 cursor-pointer
+                 active:translate-x-1 active:translate-y-1
+                 transition-all"
+    >
+      ¡JUGAR!
+    </button>
+  </div>
 </section>
+
     )
 }

@@ -2,6 +2,7 @@
 import './App.css'
 import { Home } from './components/Home'
 import { GridPersonajes } from './components/GridPersonajes'
+import { Footer } from './components/Footer'
 
 function App() {
 
@@ -12,7 +13,7 @@ function App() {
         <div id='grid-personajes' className="min-h-screen">
           <GridPersonajes/>
         </div>
-        
+        <Footer/>
       </main>
     </>
   )
