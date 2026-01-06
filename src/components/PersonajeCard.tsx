@@ -17,7 +17,12 @@ export function PersonajeCard({pj, onAcertar, yaDescubierto}: Props){
     
 
     const normalizar = (texto: string)=>
-        texto.trim().toLowerCase().replace(/\s+/g, ' ')
+        texto
+    .toLowerCase()
+    .normalize('NFD')                 // elimina acentos
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9\s]/g, '')      // elimina comas, puntos, etc
+    .trim()
     
 
     const validarRespuesta = (nombre: string, respuesta: string) => {
@@ -73,6 +78,7 @@ export function PersonajeCard({pj, onAcertar, yaDescubierto}: Props){
   <h2
     className={`
       text-2xl font-extrabold text-blue-900 mb-3
+      min-h-16
       transition-opacity duration-300
       ${acerto ? 'opacity-100' : 'opacity-0'}
     `}

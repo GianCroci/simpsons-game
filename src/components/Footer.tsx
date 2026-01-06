@@ -36,7 +36,7 @@ export function Footer(){
           </a>
 
           <a
-            href="https://github.com/TU-USUARIO"
+            href="https://github.com/GianCroci/simpsons-game"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white font-semibold hover:text-yellow-300 transition"
@@ -45,7 +45,7 @@ export function Footer(){
           </a>
 
           <a
-            href="https://tu-portfolio.com"
+            href="https://portfolio-gian-croci.netlify.app/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white font-semibold hover:text-yellow-300 transition"

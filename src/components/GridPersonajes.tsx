@@ -240,6 +240,7 @@ useEffect(() => {
     className="
       w-full max-w-7xl
       grid grid-cols-1
+      px-4
       sm:grid-cols-2
       md:grid-cols-3
       lg:grid-cols-4
